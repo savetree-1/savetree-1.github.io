@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Reflections - Ankush Rawat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #007BFF, #0056b3);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Weekly Reflections Section */
+        .weekly-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .week-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .week-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .week-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background: linear-gradient(to right, #007BFF, #0056b3);
+        }
+
+        .week-card h2 {
+            color: #007BFF;
+            margin: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .week-card p {
+            padding: 0 1rem 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Hover Effect for Additional Details */
+        .week-card:hover .additional-content {
+            display: block;
+        }
+
+        .additional-content {
+            display: none;
+            padding: 1rem;
+            background: #f0f8ff;
+            border-top: 1px solid #ddd;
+        }
+
+        .additional-content p {
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 2rem;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        footer .social-links a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Ankush Rawat</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="weekly.html">Weekly Reflections</a></li>
+                <li><a href="resume.html">Resume & Cover Letter</a></li>
+                <li><a href="presentation.html">Glimpses</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="swoc-analysis.html">SWOC Analysis</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Weekly Reflections</h1>
+                <p>Here are my key takeaways and learnings from each week of the PDP course.</p>
+            </div>
+        </section>
+
+        <section class="weekly-content">
+            <!-- Week 1 -->
+            <div class="week-card">
+                <h2><i class="fas fa-user-circle"></i> Week 1: Career Development & Self-Awareness</h2>
+                <p>Focused on self-awareness, strategic career planning, and building a portfolio mindset.</p>
+                <div class="additional-content">
+                    <p>Key Learnings:</p>
+                    <ul>
+                        <li>Gained clarity on personal strengths and long-term career goals.</li>
+                        <li>Started aligning B.Tech journey with career aspirations.</li>
+                        <li>Learned the importance of a portfolio to showcase skills and projects effectively.</li>
+                    </ul>
+                    <p>Reflection: "Knowing myself is the first step toward making confident career choices."</p>
+                </div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="week-card">
+                <h2><i class="fas fa-balance-scale"></i> Week 2: SWOC Analysis</h2>
+                <p>Conducted a detailed self-evaluation to identify strengths, weaknesses, opportunities, and challenges.</p>
+                <div class="additional-content">
+                    <p>Key Takeaways:</p>
+                    <ul>
+                        <li>Strengths: Unique skillsets and adaptability.</li>
+                        <li>Weaknesses: Areas of improvement, like time management.</li>
+                        <li>Opportunities: Training, hackathons, and networking events.</li>
+                        <li>Challenges: Competition and resource constraints.</li>
+                    </ul>
+                    <p>Reflection: "This week helped me see myself more clearly and plan my growth effectively."</p>
+                </div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="week-card">
+                <h2><i class="fas fa-brain"></i> Week 3: Johari Window & Self-Discovery</h2>
+                <p>Explored unknown strengths and gaps through feedback and self-reflection techniques.</p>
+                <div class="additional-content">
+                    <p>Learned the importance of collaboration, feedback, and adaptability in personal development.</p>
+                </div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="week-card">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Week 4: Glimpses</h2>
+                <p>Mastered the VAK learning model and techniques for delivering effective presentations.</p>
+                <div class="additional-content">
+                    <p>Key Learnings:</p>
+                    <ul>
+                        <li>Tailored presentations for visual, auditory, and kinesthetic learners.</li>
+                        <li>Practiced confident delivery using tone, eye contact, and time management.</li>
+                        <li>Structured content logically and highlighted key takeaways.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="week-card">
+                <h2><i class="fas fa-comment"></i> Week 5: Verbal & Non-Verbal Communication</h2>
+                <p>Learned how tone, gestures, and expressions enhance the communication process.</p>
+                <div class="additional-content">
+                    <p>Practiced expressing ideas with clarity and alignment between verbal and non-verbal cues.</p>
+                </div>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="week-card">
+                <h2><i class="fas fa-ear-listen"></i> Week 6: Listening & Feedback</h2>
+                <p>Mastered active listening and learned to provide constructive feedback effectively.</p>
+                <div class="additional-content">
+                    <p>This week emphasized reducing assumptions and staying present in conversations.</p>
+                </div>
+            </div>
+
+            <!-- Week 7 -->
+            <div class="week-card">
+                <h2><i class="fas fa-users"></i> Week 7: Group Discussion Skills</h2>
+                <p>Developed confidence in structured debates and collaborative discussions.</p>
+                <div class="additional-content">
+                    <p>Learned turn-taking, summarization, and respecting diverse viewpoints to enhance teamwork.</p>
+                </div>
+            </div>
+
+            <!-- Week 8 -->
+            <div class="week-card">
+                <h2><i class="fas fa-pen"></i> Week 8: Writing Effectively</h2>
+                <p>Refined professional writing skills for clarity, brevity, and logical structure.</p>
+                <div class="additional-content">
+                    <p>Focused on organizing ideas and improving the quality of emails, reports, and documents.</p>
+                </div>
+            </div>
+
+            <!-- Week 9 -->
+            <div class="week-card">
+                <h2><i class="fas fa-microphone"></i> Week 9: Advanced Public Speaking</h2>
+                <p>Enhanced public speaking skills using storytelling and quick-thinking frameworks.</p>
+                <div class="additional-content">
+                    <p>Practiced delivering concise and engaging speeches with confidence and clarity.</p>
+                </div>
+            </div>
+
+            <!-- Week 10 -->
+            <div class="week-card">
+                <h2><i class="fas fa-star"></i> Week 10: Public Speaking Mastery</h2>
+                <p>Reflected on the journey and showcased learnings through structured presentations.</p>
+                <div class="additional-content">
+                    <p>Key Learnings:</p>
+                    <ul>
+                        <li>Set a clear purpose and structured talks effectively.</li>
+                        <li>Engaged the audience using personal stories and the 3Vs (Voice, Verbal, Visual).</li>
+                        <li>Overcame stage fright and improved delivery through practice.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Ankush Rawat. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

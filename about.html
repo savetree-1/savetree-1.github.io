@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ankush Rawat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #007BFF, #00c6ff);
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255, 255, 255, 0.1)" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            text-align: left;
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .hero h1 { 
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p { 
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .tagline {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .section { 
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section h2 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #007BFF, #00c6ff);
+            border-radius: 2px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #007BFF, #00c6ff);
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(0, 123, 255, 0.15);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: #007BFF;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover i {
+            transform: scale(1.2);
+        }
+
+        .card h3 { 
+            color: #007BFF;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .card p { 
+            color: #555;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .timeline {
+            padding: 4rem 2rem;
+            background-color: #f1f8ff;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(0, 123, 255, 0.05)" d="M0,64L48,96C96,128,192,192,288,224C384,256,480,256,576,224C672,192,768,128,864,122.7C960,117,1056,171,1152,186.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+        }
+
+        .timeline-container {
+            border-left: 4px solid #007BFF;
+            padding-left: 2.5rem;
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.9rem;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background: #007BFF;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+        }
+
+        .timeline-item h3 { 
+            color: #007BFF;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .timeline-item p { 
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-date {
+            background: #007BFF;
+            color: white;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: linear-gradient(to right, #333, #444);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255, 255, 255, 0.05)" d="M0,128L48,144C96,160,192,192,288,208C384,224,480,224,576,192C672,160,768,96,864,80C960,64,1056,96,1152,128C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.8rem;
+            font-size: 1.8rem;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007BFF;
+            transform: translateY(-5px);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            margin-right: 0.5rem;
+            color: #007BFF;
+        }
+
+        /* Navbar - Preserved as requested */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: transparent;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        
+        /* Skills section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .skill-category h3 {
+            color: #007BFF;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        .skill-bar {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-level {
+            height: 10px;
+            background: #e1e1e1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-percent {
+            height: 100%;
+            background: linear-gradient(to right, #007BFF, #00c6ff);
+            border-radius: 5px;
+        }
+        
+        /* Quote section */
+        .quote-section {
+            background: linear-gradient(120deg, #007BFF, #00c6ff);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255, 255, 255, 0.1)" d="M0,160L48,144C96,128,192,96,288,85.3C384,75,480,85,576,122.7C672,160,768,224,864,229.3C960,235,1056,181,1152,170.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            opacity: 0.6;
+        }
+        
+        .quote-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .quote-author {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: white;
+            color: #007BFF;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Project highlights */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            color: #007BFF;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .project-tag {
+            background: #f1f8ff;
+            color: #007BFF;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* .nav-links {
+                gap: 0.2rem;
+            }
+            
+            .nav-links a {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.9rem;
+            } */
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar - Preserved as requested -->
+    <nav class="navbar">
+        <div class="nav-brand">Ankush Rawat</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="weekly.html">Weekly Reflections</a></li>
+            <li><a href="resume.html">Resume & Cover Letter</a></li>
+            <li><a href="presentation.html">Glimpses</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="swoc-analysis.html">SWOC Analysis</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="tagline">CSE Undergrad & Tech Enthusiast</span>
+                <h1>Ankush Rawat</h1>
+                <p>A passionate problem solver with a deep love for coding, competitive programming, and exploring innovative tech solutions. Committed to continuous learning and creating meaningful impact through technology.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="me.jpeg"Ankush Rawat" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-content">
+            <div class="quote">"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."</div>
+            <div class="quote-author">— My Guiding Principle</div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section" id="values">
+        <h2>💡 Core Values from APS Life</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Discipline & Integrity</h3>
+                <p>12 years in Army Public Schools taught me structure, punctuality, and how to win morning assemblies. These values continue to shape my approach to challenges and responsibilities.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Leadership & Teamwork</h3>
+                <p>From MUN to commanding house duties — always ready to step up and speak out. I believe great achievements come from collaborative efforts and clear direction.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>Rational Thinking</h3>
+                <p>Olympiads, debates, and logic puzzles were my academic playgrounds. I approach problems methodically, breaking complex challenges into solvable parts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section timeline" id="education">
+        <h2>📚 Education & Milestones</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <span class="timeline-date">2010-2018</span>
+                <h3>APS Udhampur</h3>
+                <p>Top performer in academics and co-curriculars (Class 1–9).</p>
+                <p>Participated in various inter-school competitions and consistently ranked among the top 5 students.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">2018-2020</span>
+                <h3>APS Birpur</h3>
+                <p>Scored 94% in Non-Medical Stream, won quizzes, Olympiads, and represented in cluster events.</p>
+                <p>Led the school quiz team to regional victories and mentored junior students in mathematics.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">2020-Present</span>
+                <h3>Graphic Era Hill University</h3>
+                <p>Currently pursuing B.Tech CSE (9.55 CGPA) with passion for DSA, ML, and tech ethics.</p>
+                <p>Active member of the university coding club and research assistant for faculty projects in machine learning applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section" id="achievements">
+        <h2>🏆 Achievements & Awards</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-medal"></i>
+                <h3>IMO Gold</h3>
+                <p>2× Gold Medalist at International Mathematics Olympiads, demonstrating exceptional problem-solving skills and mathematical aptitude.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-award"></i>
+                <h3>NSQ Regionals</h3>
+                <p>Won ₹15,000 for quiz mastery across regions. Represented my school in the National Science Quiz and secured top positions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-certificate"></i>
+                <h3>NPTEL Topper</h3>
+                <p>Top 5% in courses from IITs (Kanpur, Kharagpur, Madras). Specialized in courses related to algorithms, data structures, and AI fundamentals.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Code Ninja</h3>
+                <p>Rank 27/1000+ in Coding Ninjas Dominator Challenge. Completed complex programming tasks with optimal solutions under strict time constraints.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <h2>💪 Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>C++</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>C</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>Java</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Technologies & Frameworks</h3>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>Data Structures</span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>Django</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>Machine Learning</span>
+                        <span>78%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 78%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">
+                        <span>Cloud Computing</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Highlights -->
+    <section class="section" id="projects">
+        <h2>🚀 Project Highlights</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="/api/placeholder/400/200" alt="Project Image" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Smart Learning Assistant</h3>
+                    <p>An AI-powered learning assistant that helps students with personalized study plans and resource recommendations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">ML</span>
+                        <span class="project-tag">Django</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/api/placeholder/400/200" alt="Project Image" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Quiz Competition System</h3>
+                    <p>A comprehensive platform for organizing and participating in quiz competitions with real-time scoring and analytics.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">C++</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="section" id="tech-stack">
+        <h2>🛠️ Tech Stack</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Languages</h3>
+                <p>C++, Python, C, Java, JavaScript</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tools"></i>
+                <h3>Tools & IDEs</h3>
+                <p>GitHub, Jupyter, Colab, VSCode, PyCharm, Git</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-database"></i>
+                <h3>Cloud & DB</h3>
+                <p>Google Cloud, MySQL, MongoDB, Firebase, AWS (basic)</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Frameworks</h3>
+                <p>Django, Bootstrap, PyQt5, TensorFlow, NumPy, Pandas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="section" id="hobbies">
+        <h2>🎯 Hobbies & Interests</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-chess"></i>
+                <h3>Chess</h3>
+                <p>My kind of bug-free thinking. I enjoy strategic games that challenge my problem-solving abilities and patience. Currently rated 1850 on Chess.com.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-microphone"></i>
+                <h3>Quizzing</h3>
+                <p>Buzzers, speed, and flexing facts. I participate in quiz competitions regularly and enjoy the thrill of quick recall and knowledge application under pressure.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-newspaper"></i>
+                <h3>Geopolitics</h3>
+                <p>Reading global affairs with my morning chai. I follow international relations closely and enjoy analyzing complex global situations and their potential technological impacts.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-puzzle-piece"></i>
+                <h3>Puzzles</h3>
+                <p>Crosswords, riddles, and logic hunts. I find mental challenges relaxing and believe they keep my analytical skills sharp for technical problem-solving.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+<section class="section" style="background-color: #f1f8ff;">
+    <h2>💬 What Others Say</h2>
+    <div class="cards-container">
+        <div class="card" style="text-align: left; padding: 2rem;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: #007BFF; opacity: 0.3; margin-bottom: 1rem;"></i>
+            <p style="font-style: italic; margin-bottom: 1.5rem;">Ankush is an exceptional problem solver who consistently demonstrates deep analytical thinking. His ability to grasp complex concepts quickly makes him stand out among his peers.</p>
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <h4 style="margin: 0; color: #007BFF;">Ankit Kumar</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #666;">My College Colleague</p>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="text-align: left; padding: 2rem;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: #007BFF; opacity: 0.3; margin-bottom: 1rem;"></i>
+            <p style="font-style: italic; margin-bottom: 1.5rem;">Ankush is not just technically proficient, but also an incredibly supportive and insightful colleague. Collaborating with him on tough coding challenges has always been a rewarding experience.</p>
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <h4 style="margin: 0; color: #007BFF;">Ashish Gadiya</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #666;">College Colleague</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>📬 Get In Touch</h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p style="margin-bottom: 2rem;">Feel free to reach out for collaborations, opportunities, or just to connect! I'm always interested in challenging projects and meeting fellow tech enthusiasts.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); min-width: 250px;">
+                    <i class="fas fa-envelope" style="font-size: 1.5rem; color: #007BFF; margin-right: 1rem;"></i>
+                    <div>
+                        <h4 style="margin: 0; color: #007BFF;">Email</h4>
+                        <p style="margin: 0;">ankush.rawat@email.com</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); min-width: 250px;">
+                    <i class="fas fa-phone" style="font-size: 1.5rem; color: #007BFF; margin-right: 1rem;"></i>
+                    <div>
+                        <h4 style="margin: 0; color: #007BFF;">Phone</h4>
+                        <p style="margin: 0;">+91 98765 43210</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                <h3 style="color: #007BFF; margin-bottom: 1.5rem;">Send Me a Message</h3>
+                <form>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <input type="text" placeholder="Your Name" style="flex: 1; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                        <input type="email" placeholder="Your Email" style="flex: 1; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                    </div>
+                    <input type="text" placeholder="Subject" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 1rem; font-family: inherit;">
+                    <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 1.5rem; font-family: inherit; resize: vertical;"></textarea>
+                    <button type="submit" style="background: linear-gradient(to right, #007BFF, #00c6ff); color: white; border: none; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 600; cursor: pointer; transition: transform 0.3s ease;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Ankush Rawat</h3>
+            <p style="max-width: 600px; margin: 0 auto 1.5rem auto;">CSE undergrad passionate about technology, problem-solving, and continuous learning.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Dehradun, Uttarakhand, India</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem;">© 2025 Ankush Rawat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

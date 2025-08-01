@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOC Analysis - Ankush Rawat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Hero Section */
+        .swoc-hero {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .swoc-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .swoc-hero p {
+            font-size: 1.2rem;
+        }
+
+        /* SWOC Grid Section */
+        .swoc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .swoc-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .swoc-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .swoc-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2575fc;
+            text-align: center;
+        }
+
+        .swoc-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        /* Graphics Icon in SWOC Card */
+        .swoc-icon {
+            font-size: 3rem;
+            color: #6a11cb;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 2rem;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        footer .social-links a:hover {
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Ankush Rawat</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="weekly.html">Weekly Reflections</a></li>
+                <li><a href="resume.html">Resume & Cover Letter</a></li>
+                <li><a href="presentation.html">Glimpses</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="swoc-analysis.html">SWOC Analysis</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="swoc-hero">
+            <div class="container">
+                <h1>SWOC Analysis</h1>
+                <p>An honest and personal reflection on my strengths, weaknesses, opportunities, and challenges.</p>
+            </div>
+        </section>
+
+        <!-- SWOC Grid Section -->
+        <section class="resume-content">
+            <div class="container swoc-grid">
+                <!-- Strengths -->
+                <div class="swoc-card">
+                    <div class="swoc-icon"><i class="fas fa-thumbs-up"></i></div>
+                    <h2>Strengths</h2>
+                    <p>✔ Adaptable and quick learner with a strong analytical mindset.</p>
+                    <p>✔ Genuine curiosity for solving complex problems and exploring new domains.</p>
+                    <p>✔ Resilient in high-pressure situations, with a methodical approach to challenges.</p>
+                </div>
+
+                <!-- Weaknesses -->
+                <div class="swoc-card">
+                    <div class="swoc-icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <h2>Weaknesses</h2>
+                    <p>✖ Sometimes struggle with time management when juggling multiple tasks.</p>
+                    <p>✖ Overthink simple solutions, leading to unnecessary complexity.</p>
+                    <p>✖ Hesitant in initiating conversations in large groups, but working on building confidence.</p>
+                </div>
+
+                <!-- Opportunities -->
+                <div class="swoc-card">
+                    <div class="swoc-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h2>Opportunities</h2>
+                    <p>🌟 The rapid growth of AI and Machine Learning presents immense potential in my field.</p>
+                    <p>🌟 Open-source collaborations and hackathons provide real-world problem-solving experiences.</p>
+                    <p>🌟 Networking events and mentorship programs offer valuable industry insights.</p>
+                </div>
+
+                <!-- Challenges -->
+                <div class="swoc-card">
+                    <div class="swoc-icon"><i class="fas fa-tasks"></i></div>
+                    <h2>Challenges</h2>
+                    <p>⚠ Keeping up with the pace of technological advancements while maintaining balance.</p>
+                    <p>⚠ Overcoming self-doubt and building confidence in public speaking.</p>
+                    <p>⚠ Navigating competitive environments with limited resources and high expectations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Ankush Rawat. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

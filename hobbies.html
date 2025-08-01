@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - Ankush Rawat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            /* padding: 1em 0; */
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 0 2em; */
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links a.active {
+            border-bottom: 2px solid #00adb5;
+        }
+
+        /* Hero Section */
+        .hobbies-hero {
+            background: linear-gradient(to right, #00adb5, #393e46);
+            color: white;
+            text-align: center;
+            padding: 3em 2em;
+        }
+
+        /* Hobbies Grid */
+        .hobbies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+            margin: 2em auto;
+            max-width: 1200px;
+        }
+
+        /* Flip Card Styling */
+        .hobby-card {
+            perspective: 1000px;
+            width: 250px;
+            height: 300px;
+        }
+        .hobby-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .hobby-card:hover .hobby-card-inner {
+            transform: rotateY(180deg);
+        }
+        .hobby-card-front,
+        .hobby-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 1em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .hobby-card-front {
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hobby-card-front i {
+            font-size: 2.5em;
+            color: #00adb5;
+            margin-bottom: 0.5em;
+        }
+        .hobby-card-back {
+            background: #00adb5;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hobby-card h2 {
+            margin-bottom: 0.5em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 0.5em;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Ankush Rawat</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="weekly.html">Weekly Reflections</a></li>
+                <li><a href="resume.html">Resume & Cover Letter</a></li>
+                <li><a href="presentation.html">Glimpses</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="swoc-analysis.html">SWOC Analysis</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hobbies-hero">
+            <div class="container">
+                <h1>My Hobbies</h1>
+                <p>Here are some activities I love to engage in during my free time.</p>
+            </div>
+        </section>
+
+        <section class="hobbies-grid">
+            <!-- Reading -->
+            <div class="hobby-card">
+                <div class="hobby-card-inner">
+                    <div class="hobby-card-front">
+                        <i class="fas fa-book"></i>
+                        <h2>Reading</h2>
+                    </div>
+                    <div class="hobby-card-back">
+                        <h2>Reading</h2>
+                        <p>Exploring books on technology, personal development, and science fiction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geopolitics -->
+            <div class="hobby-card">
+                <div class="hobby-card-inner">
+                    <div class="hobby-card-front">
+                        <i class="fas fa-globe"></i>
+                        <h2>Geopolitics</h2>
+                    </div>
+                    <div class="hobby-card-back">
+                        <h2>Geopolitics</h2>
+                        <p>Analyzing India's chai diplomacy and border affairs while debating like Arnab Goswami!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chess -->
+            <div class="hobby-card">
+                <div class="hobby-card-inner">
+                    <div class="hobby-card-front">
+                        <i class="fas fa-chess"></i>
+                        <h2>Chess</h2>
+                    </div>
+                    <div class="hobby-card-back">
+                        <h2>Chess</h2>
+                        <p>Improving my strategies while dreaming of beating Magnus Carlsen someday!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journals -->
+            <div class="hobby-card">
+                <div class="hobby-card-inner">
+                    <div class="hobby-card-front">
+                        <i class="fas fa-journal-whills"></i>
+                        <h2>Journals</h2>
+                    </div>
+                    <div class="hobby-card-back">
+                        <h2>Journals</h2>
+                        <p>Enjoying academic and technical journals to stay up-to-date with innovations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crosswords -->
+            <div class="hobby-card">
+                <div class="hobby-card-inner">
+                    <div class="hobby-card-front">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h2>Crosswords</h2>
+                    </div>
+                    <div class="hobby-card-back">
+                        <h2>Crosswords</h2>
+                        <p>Solving tricky crosswords and riddles to keep my mind sharp and entertained.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productive Hobbies -->
+            <div class="hobby-card">
+                <div class="hobby-card-inner">
+                    <div class="hobby-card-front">
+                        <i class="fas fa-lightbulb"></i>
+                        <h2>Productivity</h2>
+                    </div>
+                    <div class="hobby-card-back">
+                        <h2>Productivity</h2>
+                        <p>Time management, habit tracking, and trying new tools to improve efficiency!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 Ankush Rawat. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
