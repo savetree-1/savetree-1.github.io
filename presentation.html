@@ -284,6 +284,41 @@
             transform: translateY(-2px);
         }
         
+        .drive-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .drive-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .drive-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #3367d6, #2e7d32);
+        }
+        
+        .drive-link i {
+            font-size: 1.2rem;
+        }
+        
+        .drive-link span {
+            font-size: 1rem;
+        }
+        
         /* Additional Content Section */
         .additional-content {
             padding: 4rem 0;
@@ -379,6 +414,10 @@
             .content-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .drive-links {
+                flex-direction: column;
+            }
         }
         
         @media (max-width: 480px) {
@@ -466,6 +505,21 @@
                         <a href="Discussion.mp4" download class="download-btn">
                             <i class="fas fa-download"></i> Download Discussion Video
                         </a>
+                    </div>
+                    
+                    <div class="video-section">
+                        <h3>Additional Presentation Resources</h3>
+                        <p>Access additional presentation materials and resources from Google Drive.</p>
+                        <div class="drive-links">
+                            <a href="https://drive.google.com/file/d/1rs5cUAbvcUo3i2c15uMG_7kQ6X_fuT7h/view?usp=sharing" target="_blank" class="drive-link">
+                                <i class="fab fa-google-drive"></i>
+                                <span>View Presentation Resource 1</span>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1rs5cUAbvcUo3i2c15uMG_7kQ6X_fuT7h/view?usp=sharing" target="_blank" class="drive-link">
+                                <i class="fab fa-google-drive"></i>
+                                <span>View Presentation Resource 2</span>
+                            </a>
+                        </div>
                     </div>
                     
                     <div class="video-info">
